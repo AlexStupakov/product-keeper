@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 task :monitor do
   require 'sidekiq/web'
   app = Sidekiq::Web

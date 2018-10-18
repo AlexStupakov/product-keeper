@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Product
   include Mongoid::Document
 
@@ -12,11 +14,10 @@ class Product
   validates :barcode, presence: true
   validates :producer, presence: true
 
-  index({ producer: 'text' })
+  index(producer: 'text')
 
   def self.create_or_update(attrs)
     find_or_create_by(id: attrs[:sku_unique_id])
-      .update_attributes(attrs.reject{ |k,v| k == :sku_unique_id })
+      .update_attributes(attrs.reject { |k, _v| k == :sku_unique_id })
   end
 end
-
