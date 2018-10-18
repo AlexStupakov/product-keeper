@@ -1,19 +1,19 @@
-# Poroduct Store
+# Poroduct Keeper
 
 ## Sinatra application
 
 can:
-*Reading the CSV every day
+* Reading the CSV every day
 
-*storing the updated data in a DB
+* storing the updated data in a DB
 
-*exposing a single API to get a list of products by a producer. you should include some kind of pagination mechanism in your implementation
+* exposing a single API to get a list of products by a producer. you should include some kind of pagination mechanism in your implementation
 
 ## To install
 
-*Install MongoDB and Redis on your system
+* Install MongoDB and Redis on your system
 
-*run bundle install
+* run bundle install
 
 ## To run
 
@@ -21,7 +21,8 @@ can:
 bundle exec ruby application.rb
 
 ### Start sidekiq
-bundle exec sidekiq -r ./application.rb
+run bundle exec sidekiq -r ./application.rb
 
 ### Start worker
-clockwork clock.rb
+* create file .env like .env_example with csv file location url 
+* run clockwork clock.rb

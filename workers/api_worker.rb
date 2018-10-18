@@ -9,7 +9,7 @@ class APIWorker
   $redis = Redis.new
 
   def perform(msg = "get_api_data")
-    $redis.lpush(msg, store_data(File.read('MOCK_DATA.csv')))
+    $redis.lpush(msg, store_data(remote_csv_text))
   end
 
   def store_data(csv_text)
@@ -24,7 +24,7 @@ class APIWorker
   end
 
   def remote_csv_text
-    open(env['CSV_URL'])
+    open(ENV['CSV_URL'])
   end
 
   def get_data(csv_text)

@@ -13,6 +13,7 @@ GEM
       tzinfo
     concurrent-ruby (1.0.5)
     connection_pool (2.2.2)
+    dotenv (2.5.0)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     minitest (5.11.3)
@@ -48,6 +49,7 @@ PLATFORMS
 DEPENDENCIES
   bson
   clockwork
+  dotenv
   mongo
   mongoid
   rake

@@ -1,6 +1,6 @@
 development:
   clients:
     default:
-      database: zzaazzaa
+      database: product
       hosts:
         - localhost:27017

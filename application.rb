@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'mongoid'
 require 'json'
+require 'dotenv/load'
 
 require_relative './models/product'
 require_relative './serializers/product_serializer'
